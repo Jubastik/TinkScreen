@@ -2,7 +2,6 @@ import sqlalchemy as sa
 import sqlalchemy.orm as so
 
 from database.base import Base
-# from database.user.user_model import User
 
 
 class Check(Base):

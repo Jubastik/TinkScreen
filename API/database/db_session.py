@@ -5,6 +5,7 @@ import sqlalchemy.ext.declarative as dec
 import sqlalchemy.orm as orm
 from sqlalchemy.orm import Session
 
+from database.base import Base
 from settings import settings
 
 SqlAlchemyBase = dec.declarative_base()
@@ -34,9 +35,7 @@ def global_init():
 
     __factory = orm.sessionmaker(engine, autocommit=False, autoflush=False)
 
-    from . import __all_models
-
-    SqlAlchemyBase.metadata.create_all(engine)
+    Base.metadata.create_all(engine)
 
 
 def get_session() -> Session:
