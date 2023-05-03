@@ -7,6 +7,7 @@
 3х значные - HTTP код ошибки
 10: Ошибка валидации
 11: Ошибки пользователя
+12: Ошибки результата
 """
 
 
@@ -22,6 +23,7 @@ class APIError(Exception):
 readable_code = {
     1101: "Пользователь с данным tg_id уже существует",
     1102: "Пользователь не найден",
+    1201: "Тип нарушения не найден",
 }
 
 INTERNAL_SERVER_ERROR = 500
@@ -32,3 +34,5 @@ IN_DEVELOPMENT = 1002
 
 TG_ID_OCCUPIED = 1101
 USER_NOT_FOUND = 1102
+
+VIOL_TYPE_NOT_FOUND = 1201
