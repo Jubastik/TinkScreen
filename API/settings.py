@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     API_DEBUG: bool = False
     API_HOST: str = "localhost"
     API_PORT: int = 8000
-    ROOT_TOKEN: str = "no_token"
+    API_KEY: str = "no"
 
     HTTPS_PROXY: str = ""
 

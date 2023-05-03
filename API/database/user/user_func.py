@@ -10,7 +10,7 @@ from schemas import user_pdc as shm
 class UserF(user_model.User):
     @classmethod
     def get_user(cls, session: Session, user_id: int) -> (user_model.User, int | None):
-        user = session.scalars(select(cls).where(cls.id == user_id)).one()
+        user = session.scalars(select(cls).where(cls.id == user_id)).first()
         if user is None:
             return user, my_err.USER_NOT_FOUND
 
@@ -33,7 +33,7 @@ class UserF(user_model.User):
 
     @classmethod
     def get_user_by_tg_id(cls, session: Session, tg_id: int) -> (user_model.User, int | None):
-        user = session.scalars(select(cls).where(cls.tg_id == tg_id)).one()
+        user = session.scalars(select(cls).where(cls.tg_id == tg_id)).first()
         if user is None:
             return user, my_err.USER_NOT_FOUND
         return user, None

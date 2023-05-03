@@ -6,6 +6,7 @@ from fastapi.exceptions import RequestValidationError
 from starlette import status
 from starlette.responses import JSONResponse
 
+import auth
 import my_err
 from api import router
 from database import db_session
@@ -14,17 +15,17 @@ from settings import settings
 
 tags_metadata = [
     {
-        "name": "student",
-        "description": "Взаимодействие с учениками",
+        "name": "user",
+        "description": "Операции с пользователями",
     }
 ]
 
 db_session.global_init()
 app = FastAPI(
-    title="APIv2",
-    description="Обновлённое API для Homework HUB",
+    title="TinkScreen",
+    description="API для бота TinkScreen",
     openapi_tags=tags_metadata,
-    # dependencies=[Depends(verify_root_token)],
+    dependencies=[Depends(auth.get_api_key)],
     debug=settings().API_DEBUG,
 )
 app.include_router(router)

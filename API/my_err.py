@@ -14,7 +14,7 @@ class APIError(Exception):
     def __init__(self, status_code: int, err_id: int, msg: str = None):
         self.msg = msg
         if msg is None:
-            self.msg = readable_code[status_code]
+            self.msg = readable_code[err_id]
         self.status_code = status_code
         self.err_id = err_id
 
