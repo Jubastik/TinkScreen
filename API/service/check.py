@@ -27,20 +27,19 @@ class CheckService:
         scores = {
             "manipulation": 0,
             "profanity": 0,
-            "advertisement": 0,
+            "advertisement": 80,
             "begging": 0,
         }
         for type, score in scores.items():
             db_type, err = ViolationTypeF.get_by_name(self.session, type)
             if err is not None:
                 raise my_err.APIError(status.HTTP_404_NOT_FOUND, err)
-            is_violation = True if score >= db_type.block_score else False
+            is_violation = True if score >= db_type.blocking_score else False
             result, err = ResultF.create_result(self.session, res_shm.ResultCreate(score=score,
                                                                                    is_violation=is_violation,
                                                                                    violation="",
                                                                                    type_id=db_type.id,
                                                                                    check_id=check.id))
-
         return check
 
     def get_checks(self) -> list[Check]:

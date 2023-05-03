@@ -1,3 +1,5 @@
+from typing import List
+
 import sqlalchemy as sa
 import sqlalchemy.orm as so
 
@@ -10,7 +12,7 @@ class Check(Base):
     user_id: so.Mapped[int] = so.mapped_column(sa.ForeignKey("users.id"))
     user: so.Mapped["User"] = so.relationship(back_populates="checks")
     text: so.Mapped[str] = so.mapped_column(sa.Text)
-    results: so.Mapped["Result"] = so.relationship(back_populates="check", cascade="all, delete-orphan")
+    results: so.Mapped[List["Result"]] = so.relationship(back_populates="check", cascade="all, delete-orphan")
     verified: so.Mapped[bool] = so.mapped_column(default=False)
     date: so.Mapped[sa.DateTime] = so.mapped_column(sa.DateTime, default=sa.func.now())
 

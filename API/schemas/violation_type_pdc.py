@@ -18,7 +18,5 @@ class ViolationTypeUpdate(ViolationTypeBase):
 
 
 class ViolationTypeReturn(ViolationTypeBase):
-    id: int
-
     class Config:
         orm_mode = True

@@ -7,12 +7,11 @@ class ResultBase(BaseModel):
     score: float
     is_violation: bool
     violation: str
-    type_id: int
     check_id: int
 
 
 class ResultCreate(ResultBase):
-    pass
+    type_id: int
 
 
 class ResultUpdate(ResultBase):
