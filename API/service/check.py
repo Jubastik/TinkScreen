@@ -25,26 +25,30 @@ class CheckService:
         check, err = CheckF.create_check(self.session, data_check)
         if err is not None:
             pass
-        model_res = model.predict_one(check.text).get_scores()
-        scores = {
-            "manipulation": [0, ""],
-            "profanity": [0, ""],
-            "advertisement": [0, ""],
-            "begging": [0, ""],
-        }
+        model_res = model.predict_one(check.text, 10).get_scores()
+        print(model_res)
+        normal_cnt = 0
+        violations_cnt = 0
+        if "normal" in model_res:
+            normal_cnt = len(model_res["normal"])
+            del model_res["normal"]
+        scores = {}
         for key, values in model_res.items():
-            print(key, values)
-            if len(values) == 0 or key == "normal":
+            if len(values) == 0:
                 continue
-            if scores[key][0] < max(values, key=lambda x: x[0])[0]:
-                scores[key] = list(max(values, key=lambda x: x[0]))
+            violations_cnt += len(values)
+            values = sorted(values, key=lambda x: x[0], reverse=True)
+            val = list(values[0])
+            val[0] *= 100
+            scores[key] = val
+
         print(scores)
+        print(normal_cnt, violations_cnt)
         for type, score in scores.items():
-            score[0] *= 100
             db_type, err = ViolationTypeF.get_by_name(self.session, type)
             if err is not None:
                 raise my_err.APIError(status.HTTP_404_NOT_FOUND, err)
-            is_violation = True if score[0] >= db_type.blocking_score else False
+            is_violation = True if score[0] >= db_type.blocking_score and normal_cnt <= violations_cnt * 4 else False
             result, err = ResultF.create_result(self.session, res_shm.ResultCreate(score=score[0],
                                                                                    is_violation=is_violation,
                                                                                    violation=score[1] if is_violation is True else "",
