@@ -27,8 +27,9 @@ model = ClassifierModule(
     path_to_tokenizer="model_data/keras_tokenizer.pickle",
     # init_stopwords=False
 )
-print(model.predict_one("В статье поговорим про построение автоматической системы модерации для обработки "
-                    "английского языка с использованием алгоритмов машинного обучения пошёл нах*й", 5).get_human_readable_separates())
+
+print(model.predict_one("Модуль, используемый для создания виртуальных сред и управления ими, называется ven. обычно ven устанавливает самую последнюю версию Python, которая у вас есть в наличии. Если в вашей системе установлено несколько версий Python, вы можете выбрать конкретную версию Python, запустив python 3 или любую другую версию, которую вы хотите.", 5).get_human_readable_separates())
+
 app = FastAPI(
     title="TinkScreen",
     description="API для бота TinkScreen",
