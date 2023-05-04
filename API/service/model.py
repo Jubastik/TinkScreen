@@ -1,4 +1,4 @@
-from typing import Optional, List, Set, Tuple, Union
+from typing import Optional, List, Set, Tuple, Union, Dict
 from keras.preprocessing.text import Tokenizer
 from nltk.tokenize.regexp import RegexpTokenizer
 from keras.utils import pad_sequences
@@ -83,8 +83,12 @@ class PredictResult:
     def __str__(self):
         return repr(self)
 
-    def get_scores(self):
-        return {label: score for label, score in zip(LABELS, self.total_result)}
+    def get_scores(self) -> Dict[str, List[Tuple[float, str]]]:
+        return {LABELS[i]: [
+            (proba[i], text)
+            for text, proba in self.separate_result
+            if np.argmax(proba) == i
+        ] for i in range(len(LABELS))}
 
     def get_human_readable_separates(self) -> str:
         format_str = '{text:^{max_sep_len}} | {_class:^13} | {prob}'

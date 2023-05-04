@@ -28,7 +28,6 @@ model = ClassifierModule(
     # init_stopwords=False
 )
 
-print(model.predict_one("Модуль, используемый для создания виртуальных сред и управления ими, называется ven. обычно ven устанавливает самую последнюю версию Python, которая у вас есть в наличии. Если в вашей системе установлено несколько версий Python, вы можете выбрать конкретную версию Python, запустив python 3 или любую другую версию, которую вы хотите.", 5).get_human_readable_separates())
 
 app = FastAPI(
     title="TinkScreen",

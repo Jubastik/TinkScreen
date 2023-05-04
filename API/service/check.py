@@ -16,6 +16,7 @@ class CheckService:
         self.session = session
 
     def create_check(self, data_check: shm.CheckCreate) -> Check:
+        from app import model
         if data_check.user_id is None and data_check.tg_id:
             user, err = UserF.get_user_by_tg_id(self.session, data_check.tg_id)
             if err is not None:
@@ -24,20 +25,29 @@ class CheckService:
         check, err = CheckF.create_check(self.session, data_check)
         if err is not None:
             pass
+        model_res = model.predict_one(check.text).get_scores()
         scores = {
-            "manipulation": 0,
-            "profanity": 0,
-            "advertisement": 80,
-            "begging": 0,
+            "manipulation": [0, ""],
+            "profanity": [0, ""],
+            "advertisement": [0, ""],
+            "begging": [0, ""],
         }
+        for key, values in model_res.items():
+            print(key, values)
+            if len(values) == 0 or key == "normal":
+                continue
+            if scores[key][0] < max(values, key=lambda x: x[0])[0]:
+                scores[key] = list(max(values, key=lambda x: x[0]))
+        print(scores)
         for type, score in scores.items():
+            score[0] *= 100
             db_type, err = ViolationTypeF.get_by_name(self.session, type)
             if err is not None:
                 raise my_err.APIError(status.HTTP_404_NOT_FOUND, err)
-            is_violation = True if score >= db_type.blocking_score else False
-            result, err = ResultF.create_result(self.session, res_shm.ResultCreate(score=score,
+            is_violation = True if score[0] >= db_type.blocking_score else False
+            result, err = ResultF.create_result(self.session, res_shm.ResultCreate(score=score[0],
                                                                                    is_violation=is_violation,
-                                                                                   violation="",
+                                                                                   violation=score[1] if is_violation is True else "",
                                                                                    type_id=db_type.id,
                                                                                    check_id=check.id))
         return check
