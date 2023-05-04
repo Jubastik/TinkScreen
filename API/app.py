@@ -10,6 +10,7 @@ import auth
 import my_err
 from api import router
 from database import db_session
+from service.model import ClassifierModule
 from settings import settings
 
 
@@ -21,6 +22,13 @@ tags_metadata = [
 ]
 
 db_session.global_init()
+model = ClassifierModule(
+    path_to_model="model_data/pulse_model",
+    path_to_tokenizer="model_data/keras_tokenizer.pickle",
+    # init_stopwords=False
+)
+print(model.predict_one("В статье поговорим про построение автоматической системы модерации для обработки "
+                    "английского языка с использованием алгоритмов машинного обучения пошёл нах*й", 5).get_human_readable_separates())
 app = FastAPI(
     title="TinkScreen",
     description="API для бота TinkScreen",
