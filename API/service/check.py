@@ -1,5 +1,6 @@
 from fastapi import Depends, status
 from sqlalchemy.orm import Session
+from transliterate import translit
 
 import my_err
 from database.check.check_func import CheckF
@@ -25,6 +26,7 @@ class CheckService:
         check, err = CheckF.create_check(self.session, data_check)
         if err is not None:
             pass
+        check.text = translit(check.text, 'ru')
         model_res = model.predict_one(check.text, 5).get_scores()
         print(model_res)
         normal_cnt = 0

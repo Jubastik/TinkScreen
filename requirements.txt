@@ -7,3 +7,4 @@ nltk
 tensorflow-io-gcs-filesystem
 tensorflow
 keras
+transliterate
