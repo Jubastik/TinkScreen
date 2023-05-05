@@ -17,11 +17,14 @@ async def respGetter(dialog_manager: DialogManager, **kwargs):
         "advertisement": 'нет',
         "begging": 'нет'
     }
+    print(results)
     for i in results:
         print(i)
         if i["is_violation"]:
             flag = True
+            print(i["type"])
             problem[i["type"]["name"]] = i["violation"]
+        print(problem)
     if flag:
         flag = "Текст не прошёл проверку"
     else:

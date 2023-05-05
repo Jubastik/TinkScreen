@@ -9,7 +9,7 @@ from aiogram_dialog.widgets.kbd import Button, Row, Column
 from aiogram_dialog.widgets.text import Const, Format, Multi
 from aiogram.types import ContentType
 from getters_funcs.getters import greetingGetter, respGetter
-from methods import sendPost, sendtomanager, historyGroup
+from methods import sendPost, sendtomanager, historyGroup, cleaner
 from aiogram_dialog.widgets.input import MessageInput
 from api.api_functions import check_text
 from aiogram.dispatcher.filters.state import StatesGroup, State
@@ -27,7 +27,9 @@ async def historySwitching(c: CallbackQuery, button: Button, manager: DialogMana
 
 async def textAnalyze(message: Message, message_input: MessageInput, manager: DialogManager):
     resp = await check_text(message.from_user.id, message.text)
+    await cleaner(manager)
     manager.current_context().dialog_data["resp"] = resp
+    print(resp)
     await manager.dialog().switch_to(MySG.answer)
 
 
