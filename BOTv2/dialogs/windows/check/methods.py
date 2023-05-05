@@ -10,7 +10,7 @@ from services.restapi.restapi import api_check_text
 async def finish_check(message: Message, dialog: DialogProtocol, manager: DialogManager, text_to_del=None):
     user = await get_user(get_tg_id_from_manager(manager))
     api_res = await api_check_text(user["tg_id"], manager.dialog_data["text"])
-    check_text = ["Обнаруженные нарушения:"]
+    check_text = [f"    <i>{str(api_res['text'][:150]) + '...' if len(api_res['text']) > 200 else api_res['text']}</i>\nОбнаруженные нарушения:"]
     for chk in api_res["results"]:
         if chk["is_violation"]:
             check_text.append(f"❗️Текст содержит {chk['type']['name']}: {chk['violation']}")

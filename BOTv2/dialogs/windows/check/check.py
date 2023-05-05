@@ -16,7 +16,7 @@ CheckMainWin = Window(
 )
 
 CheckInfoWin = Window(
-    Format("Результат проверки 👇\n{check}"),
+    Format("Результат проверки поста 📝\n{check}"),
     Group(
         Cancel(Const("Назад")),
     ),

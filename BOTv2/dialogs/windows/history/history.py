@@ -22,7 +22,7 @@ HistoryMainWin = Window(
 )
 
 HistoryInfoWin = Window(
-    Format("Результат проверки 👇 {check}"),
+    Format("Результат проверки 📝 {check}"),
     Group(
         Cancel(Const("Назад")),
     ),

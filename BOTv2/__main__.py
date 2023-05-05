@@ -65,7 +65,6 @@ async def main():
     dp.include_router(dlg_router)
     registry = DialogRegistry(dp)
     register_dialogs(registry)
-    await setup_bot_commands(bot)
 
     await dp.start_polling(bot, on_shutdown=on_shutdown, on_startup=on_startup)
 

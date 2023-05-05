@@ -13,7 +13,7 @@ class Settings(BaseSettings):
 
     ADMIN_ID: int
 
-    USE_REDIS: bool = True  # Without redis, the API connection does not work
+    USE_REDIS: bool = False  # Without redis, the API connection does not work
     REDIS_HOST: str = "localhost"
     REDIS_PORT: int = 6379
     REDIS_PASSWORD: str = ""
