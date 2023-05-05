@@ -49,6 +49,23 @@ async def api_check_text(tg_id: int, text: str):
             return data
 
 
+async def api_get_checks(tg_id: int, id_type="studen_tg"):
+    headers = await get_headers()
+    async with aiohttp.ClientSession(headers=headers) as session:
+        params = {
+            "tg_id": tg_id,
+            "id_type": "student_tg"
+        }
+        async with session.post(f"{CHECK_URL}/{tg_id}?id_type=student_tg", params=params) as resp:
+            data = await resp.json()
+            if resp.status != 200 and data["error_code"] == 1000:
+                raise ApiError(VALIDATION_ERROR)
+            if resp.status != 200:
+                raise ApiError(USER_ERROR)
+            return data
+
+
+
 
 
 
