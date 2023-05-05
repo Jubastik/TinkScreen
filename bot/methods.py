@@ -26,3 +26,22 @@ historyGroup = ScrollingGroup(
             width=6,
             height=2,
         )
+
+
+async def cleaner(manager: DialogManager):
+    try:
+        manager.current_context().dialog_data.pop("manipulation")
+    except Exception:
+        pass
+    try:
+        manager.current_context().dialog_data.pop("advertisement")
+    except Exception:
+        pass
+    try:
+        manager.current_context().dialog_data.pop("profanity")
+    except Exception:
+        pass
+    try:
+        manager.current_context().dialog_data.pop("begging")
+    except Exception:
+        pass

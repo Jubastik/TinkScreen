@@ -42,7 +42,7 @@ async def check_text(id, text):
         "text": text,
         "tg_id": id
     }
-    async with aiohttp.ClientSession(headers=headers) as session:
+    async with aiohttp.ClientSession() as session:
         async with session.post(CHECK_URL, json=body) as resp:
             data = await resp.json()
             return data
