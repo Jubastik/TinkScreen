@@ -29,4 +29,18 @@ async def getter_history_main(dialog_manager: DialogManager, **kwargs):
 
 
 async def start_history_info(message: Message, dialog: DialogProtocol, manager: DialogManager, check_id: int):
-    pass
+    user = await get_user(get_tg_id_from_manager(manager))
+    api_res = await api_get_checks(user["tg_id"])
+    my_res = None
+    for res in api_res:
+        if int(res["id"]) == int(check_id):
+            my_res = res.copy()
+            break
+    check_text = ["Обнаруженные нарушения:"]
+    for chk in my_res["results"]:
+        if chk["is_violation"]:
+            check_text.append(f"❗️Текст содержит {chk['type']['name']}: {chk['violation']}")
+    if len(check_text) == 1:
+        check_text.append("Нарушений не обнаружено 🎉")
+    manager.dialog_data["check"] = "\n".join(check_text)
+    await manager.next()

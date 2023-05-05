@@ -20,3 +20,12 @@ HistoryMainWin = Window(
     state=HistorySG.main,
     getter=getter_history_main,
 )
+
+HistoryInfoWin = Window(
+    Format("Результат проверки 👇 {check}"),
+    Group(
+        Cancel(Const("Назад")),
+    ),
+    getter=getter_info,
+    state=HistorySG.info,
+)
