@@ -11,6 +11,7 @@ from services.restapi.restapi import api_check_text, api_get_checks
 async def getter_history_main(dialog_manager: DialogManager, **kwargs):
     user = await get_user(get_tg_id_from_manager(dialog_manager))
     checks = await api_get_checks(user["tg_id"])
+    checks = checks[::-1]
     return {"checks": checks}
 
 

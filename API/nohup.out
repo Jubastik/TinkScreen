@@ -1,0 +1,379 @@
+INFO:     Will watch for changes in these directories: ['/root/TinkScreen/API']
+INFO:     Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+INFO:     Started reloader process [10380] using StatReload
+2023-05-05 16:26:50.090237: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-05-05 16:26:50.139609: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-05-05 16:26:50.140097: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-05 16:26:51.042293: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2023-05-05 16:26:52.348620: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 67387200 exceeds 10% of free system memory.
+2023-05-05 16:26:52.420136: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 67387200 exceeds 10% of free system memory.
+2023-05-05 16:26:52.444934: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 67387200 exceeds 10% of free system memory.
+2023-05-05 16:26:52.788308: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 67387200 exceeds 10% of free system memory.
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+INFO:     Started server process [10382]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Инициализация базы данных...
+Подключение к базе данных по адресу sqlite:///database/APIv2.db?check_same_thread=False
+2023-05-05 16:33:10,785 INFO:     127.0.0.1:56440 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:33:10,804 INFO:     127.0.0.1:56440 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:33:10,854 INFO:     127.0.0.1:56448 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:33:10,859 INFO:     127.0.0.1:56452 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:33:10,864 INFO:     127.0.0.1:56452 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:33:10,911 INFO:     127.0.0.1:56460 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:33:13,591 INFO:     127.0.0.1:56464 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:33:13,595 INFO:     127.0.0.1:56464 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:33:13,644 INFO:     127.0.0.1:56472 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:33:26,418 INFO:     127.0.0.1:51318 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:33:26,423 INFO:     127.0.0.1:51318 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:33:26,471 INFO:     127.0.0.1:51330 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:33:26,474 INFO:     127.0.0.1:51338 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:33:26,478 INFO:     127.0.0.1:51338 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:33:26,527 INFO:     127.0.0.1:51354 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:33:33,459 INFO:     127.0.0.1:51358 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:33:33,463 INFO:     127.0.0.1:51358 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:33:33,512 INFO:     127.0.0.1:51372 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [(0.9385188, 'Мать ебал')], 'advertisement': [], 'begging': [], 'normal': []}
+{'profanity': [93.85188221931458, 'Мать ебал']}
+0 1
+2023-05-05 16:33:33,815 INFO:     127.0.0.1:51382 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:33:41,808 INFO:     127.0.0.1:57912 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:33:41,813 INFO:     127.0.0.1:57912 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:33:41,865 INFO:     127.0.0.1:57918 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:33:55,717 INFO:     127.0.0.1:60518 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:33:55,722 INFO:     127.0.0.1:60518 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:33:55,770 INFO:     127.0.0.1:60522 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [(0.99522614, 'Мать Гордея Ебал рот сука')], 'advertisement': [], 'begging': [], 'normal': []}
+{'profanity': [99.52261447906494, 'Мать Гордея Ебал рот сука']}
+0 1
+2023-05-05 16:33:55,844 INFO:     127.0.0.1:60534 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:34:01,785 INFO:     127.0.0.1:60536 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:34:01,791 INFO:     127.0.0.1:60536 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:34:01,841 INFO:     127.0.0.1:60544 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:34:56,051 INFO:     127.0.0.1:51404 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:34:56,056 INFO:     127.0.0.1:51404 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:34:56,103 INFO:     127.0.0.1:51410 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:34:56,106 INFO:     127.0.0.1:51424 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:34:56,110 INFO:     127.0.0.1:51424 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:34:56,159 INFO:     127.0.0.1:51432 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:10,523 INFO:     127.0.0.1:56014 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:35:10,527 INFO:     127.0.0.1:56014 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:35:10,577 INFO:     127.0.0.1:56016 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [(0.5087115, 'подари рублик пж')], 'advertisement': [], 'begging': [], 'normal': []}
+{'profanity': [50.87115168571472, 'подари рублик пж']}
+0 1
+2023-05-05 16:35:10,663 INFO:     127.0.0.1:56030 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:22,418 INFO:     127.0.0.1:55358 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:35:22,422 INFO:     127.0.0.1:55358 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:35:22,471 INFO:     127.0.0.1:55362 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:36,172 INFO:     127.0.0.1:50170 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:35:36,176 INFO:     127.0.0.1:50170 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:35:36,224 INFO:     127.0.0.1:50176 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [(0.99697375, 'сегодня вечером скупаем акции тинька')], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': []}
+{'manipulation': [99.69737529754639, 'сегодня вечером скупаем акции тинька']}
+0 1
+2023-05-05 16:35:36,335 INFO:     127.0.0.1:50178 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:52,938 INFO:     127.0.0.1:40944 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:35:52,943 INFO:     127.0.0.1:40944 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:35:52,992 INFO:     127.0.0.1:40954 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:53,017 INFO:     127.0.0.1:40968 - "GET /api/check/my/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:54,646 INFO:     127.0.0.1:56298 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:35:54,651 INFO:     127.0.0.1:56298 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:35:54,701 INFO:     127.0.0.1:56302 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:54,727 INFO:     127.0.0.1:56316 - "GET /api/check/my/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:56,203 INFO:     127.0.0.1:56330 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:35:56,208 INFO:     127.0.0.1:56330 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:35:56,255 INFO:     127.0.0.1:56346 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:57,195 INFO:     127.0.0.1:56362 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:35:57,199 INFO:     127.0.0.1:56362 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:35:57,249 INFO:     127.0.0.1:56376 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:57,267 INFO:     127.0.0.1:56390 - "GET /api/check/my/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:59,125 INFO:     127.0.0.1:56392 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:35:59,129 INFO:     127.0.0.1:56392 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:35:59,179 INFO:     127.0.0.1:56402 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:35:59,196 INFO:     127.0.0.1:56406 - "GET /api/check/my/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:36:00,400 INFO:     127.0.0.1:56416 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:36:00,406 INFO:     127.0.0.1:56416 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:36:00,455 INFO:     127.0.0.1:56432 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:36:01,276 INFO:     127.0.0.1:56438 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:36:01,280 INFO:     127.0.0.1:56438 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:36:01,332 INFO:     127.0.0.1:56444 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:36:01,350 INFO:     127.0.0.1:56446 - "GET /api/check/my/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:36:02,423 INFO:     127.0.0.1:56452 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:36:02,427 INFO:     127.0.0.1:56452 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:36:02,475 INFO:     127.0.0.1:56468 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:36:02,493 INFO:     127.0.0.1:56472 - "GET /api/check/my/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:36:04,041 INFO:     127.0.0.1:50566 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:36:04,046 INFO:     127.0.0.1:50566 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:36:04,095 INFO:     127.0.0.1:50578 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:36:41,675 INFO:     127.0.0.1:55316 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:36:41,680 INFO:     127.0.0.1:55316 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:36:41,727 INFO:     127.0.0.1:55322 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:36:44,734 INFO:     127.0.0.1:39822 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:36:44,738 INFO:     127.0.0.1:39822 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:36:44,787 INFO:     127.0.0.1:39832 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:36:52,076 INFO:     127.0.0.1:39834 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:36:52,080 INFO:     127.0.0.1:39834 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:36:52,127 INFO:     127.0.0.1:39840 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:39:38,079 INFO:     127.0.0.1:40262 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:39:38,083 INFO:     127.0.0.1:40262 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:39:38,131 INFO:     127.0.0.1:40276 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:39:46,725 INFO:     127.0.0.1:41476 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:39:46,729 INFO:     127.0.0.1:41476 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:39:46,779 INFO:     127.0.0.1:41484 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.8352381, 'Я считаю Олег лучший')]}
+{}
+1 0
+2023-05-05 16:39:46,852 INFO:     127.0.0.1:41498 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:39:48,570 INFO:     127.0.0.1:41502 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:39:48,575 INFO:     127.0.0.1:41502 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:39:48,624 INFO:     127.0.0.1:41514 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:40:02,773 INFO:     127.0.0.1:53178 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:40:02,779 INFO:     127.0.0.1:53178 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:40:02,829 INFO:     127.0.0.1:53182 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.56794447, 'Я считаю залететь котлету яндекс')]}
+{}
+1 0
+2023-05-05 16:40:02,913 INFO:     127.0.0.1:53198 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:41:20,785 INFO:     127.0.0.1:50872 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:41:20,789 INFO:     127.0.0.1:50872 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:41:20,840 INFO:     127.0.0.1:50874 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:41:31,991 INFO:     127.0.0.1:35450 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:41:31,995 INFO:     127.0.0.1:35450 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:41:32,044 INFO:     127.0.0.1:35456 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [(0.8713838, 'Сука')], 'advertisement': [], 'begging': [], 'normal': []}
+{'profanity': [87.1383786201477, 'Сука']}
+0 1
+2023-05-05 16:41:32,132 INFO:     127.0.0.1:35458 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:41:33,671 INFO:     127.0.0.1:54540 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:41:33,675 INFO:     127.0.0.1:54540 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:41:33,726 INFO:     127.0.0.1:54544 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:41:38,767 INFO:     127.0.0.1:54550 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:41:38,773 INFO:     127.0.0.1:54550 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:41:38,825 INFO:     127.0.0.1:54552 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.7381595, 'Цука')]}
+{}
+1 0
+2023-05-05 16:41:38,909 INFO:     127.0.0.1:54558 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:41:44,549 INFO:     127.0.0.1:33598 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:41:44,554 INFO:     127.0.0.1:33598 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:41:44,605 INFO:     127.0.0.1:33614 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:41:53,637 INFO:     127.0.0.1:33616 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:41:53,640 INFO:     127.0.0.1:33616 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:41:53,687 INFO:     127.0.0.1:55372 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [(0.8713838, 'Сука')], 'advertisement': [], 'begging': [], 'normal': []}
+{'profanity': [87.1383786201477, 'Сука']}
+0 1
+2023-05-05 16:41:53,769 INFO:     127.0.0.1:55380 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:41:55,656 INFO:     127.0.0.1:55386 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:41:55,660 INFO:     127.0.0.1:55386 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:41:55,712 INFO:     127.0.0.1:55390 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:55:15,378 INFO:     127.0.0.1:54198 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:55:15,383 INFO:     127.0.0.1:54198 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:55:15,434 INFO:     127.0.0.1:54214 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:55:15,438 INFO:     127.0.0.1:54226 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:55:15,443 INFO:     127.0.0.1:54226 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:55:15,491 INFO:     127.0.0.1:54236 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:55:33,039 INFO:     127.0.0.1:48796 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:55:33,044 INFO:     127.0.0.1:48796 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:55:33,096 INFO:     127.0.0.1:48798 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.9612412, 'Рассказчиков хороший чел')]}
+{}
+1 0
+2023-05-05 16:55:33,179 INFO:     127.0.0.1:48800 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:55:36,843 INFO:     127.0.0.1:35736 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:55:36,847 INFO:     127.0.0.1:35736 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:55:36,896 INFO:     127.0.0.1:35744 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:55:53,522 INFO:     127.0.0.1:39330 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:55:53,527 INFO:     127.0.0.1:39330 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:55:53,576 INFO:     127.0.0.1:39334 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [(0.827399, 'У Гордея мама шлюха')], 'advertisement': [], 'begging': [], 'normal': []}
+{'profanity': [82.73990154266357, 'У Гордея мама шлюха']}
+0 1
+2023-05-05 16:55:53,654 INFO:     127.0.0.1:39338 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:55:56,247 INFO:     127.0.0.1:36758 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:55:56,252 INFO:     127.0.0.1:36758 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:55:56,305 INFO:     127.0.0.1:36760 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:08,077 INFO:     127.0.0.1:47464 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:08,081 INFO:     127.0.0.1:47464 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:08,131 INFO:     127.0.0.1:47470 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.7381595, 'Цука')]}
+{}
+1 0
+2023-05-05 16:56:08,212 INFO:     127.0.0.1:47484 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:09,542 INFO:     127.0.0.1:47488 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:09,547 INFO:     127.0.0.1:47488 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:09,595 INFO:     127.0.0.1:47496 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:16,079 INFO:     127.0.0.1:41302 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:16,087 INFO:     127.0.0.1:41302 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:16,134 INFO:     127.0.0.1:41316 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [(0.8713838, 'Сука')], 'advertisement': [], 'begging': [], 'normal': []}
+{'profanity': [87.1383786201477, 'Сука']}
+0 1
+2023-05-05 16:56:16,208 INFO:     127.0.0.1:41324 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:19,560 INFO:     127.0.0.1:41334 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:19,565 INFO:     127.0.0.1:41334 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:19,616 INFO:     127.0.0.1:41336 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:25,909 INFO:     127.0.0.1:51824 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:25,914 INFO:     127.0.0.1:51824 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:25,965 INFO:     127.0.0.1:51826 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:32,330 INFO:     127.0.0.1:51838 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:32,334 INFO:     127.0.0.1:51838 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:32,383 INFO:     127.0.0.1:51854 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.7258556, 'П1дор')]}
+{}
+1 0
+2023-05-05 16:56:32,448 INFO:     127.0.0.1:51870 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:34,040 INFO:     127.0.0.1:50478 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:34,045 INFO:     127.0.0.1:50478 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:34,095 INFO:     127.0.0.1:50488 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:38,484 INFO:     127.0.0.1:50490 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:38,487 INFO:     127.0.0.1:50490 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:38,534 INFO:     127.0.0.1:50494 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:47,549 INFO:     127.0.0.1:52200 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:47,554 INFO:     127.0.0.1:52200 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:47,603 INFO:     127.0.0.1:52204 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.60615903, 'П идор')]}
+{}
+1 0
+2023-05-05 16:56:47,682 INFO:     127.0.0.1:52206 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:51,107 INFO:     127.0.0.1:52212 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:51,111 INFO:     127.0.0.1:52212 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:51,158 INFO:     127.0.0.1:52214 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:56:59,757 INFO:     127.0.0.1:44272 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:56:59,762 INFO:     127.0.0.1:44272 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:56:59,810 INFO:     127.0.0.1:44276 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.60615903, 'Ты п идор')]}
+{}
+1 0
+2023-05-05 16:56:59,877 INFO:     127.0.0.1:44284 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:57:01,516 INFO:     127.0.0.1:44296 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:57:01,520 INFO:     127.0.0.1:44296 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:57:01,573 INFO:     127.0.0.1:44298 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:57:05,100 INFO:     127.0.0.1:53970 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:57:05,105 INFO:     127.0.0.1:53970 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:57:05,156 INFO:     127.0.0.1:53984 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:57:05,181 INFO:     127.0.0.1:53996 - "GET /api/check/my/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:57:06,499 INFO:     127.0.0.1:54010 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:57:06,504 INFO:     127.0.0.1:54010 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:57:06,558 INFO:     127.0.0.1:54020 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:57:06,598 INFO:     127.0.0.1:54026 - "GET /api/check/my/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:57:07,509 INFO:     127.0.0.1:54040 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:57:07,515 INFO:     127.0.0.1:54040 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:57:07,565 INFO:     127.0.0.1:54048 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:57:07,604 INFO:     127.0.0.1:54056 - "GET /api/check/my/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 16:57:08,542 INFO:     127.0.0.1:54058 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 16:57:08,547 INFO:     127.0.0.1:54058 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 16:57:08,596 INFO:     127.0.0.1:54074 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:00:15,575 INFO:     127.0.0.1:43722 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:00:15,580 INFO:     127.0.0.1:43722 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:00:15,628 INFO:     127.0.0.1:43734 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [(0.8459227, 'Ты пидор')], 'advertisement': [], 'begging': [], 'normal': []}
+{'profanity': [84.59227085113525, 'Ты пидор']}
+0 1
+2023-05-05 17:00:15,722 INFO:     127.0.0.1:43740 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:12:48,817 INFO:     127.0.0.1:54380 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:12:48,827 INFO:     127.0.0.1:54380 - "POST /api/user/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:12:48,872 INFO:     127.0.0.1:54392 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:12:48,876 INFO:     127.0.0.1:54392 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:12:48,923 INFO:     127.0.0.1:54408 - "GET /api/user/224475156?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:13:00,103 INFO:     127.0.0.1:47758 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:13:00,107 INFO:     127.0.0.1:47758 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:13:00,155 INFO:     127.0.0.1:47760 - "GET /api/user/224475156?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [(0.9896129, 'Все идем лонг')], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': []}
+{'manipulation': [98.9612877368927, 'Все идем лонг']}
+0 1
+2023-05-05 17:13:00,236 INFO:     127.0.0.1:47774 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:13:46,926 INFO:     127.0.0.1:39478 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:13:46,931 INFO:     127.0.0.1:39478 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:13:46,978 INFO:     127.0.0.1:39486 - "GET /api/user/224475156?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:14:29,706 INFO:     127.0.0.1:49550 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:14:29,711 INFO:     127.0.0.1:49550 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:14:29,759 INFO:     127.0.0.1:49556 - "GET /api/user/224475156?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.73123395, 'Люблю шахматы Всем рекомендую испанскую'), (0.95483917, 'защиту Всех коней вперед')]}
+{}
+2 0
+2023-05-05 17:14:29,834 INFO:     127.0.0.1:49566 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:29:15,601 INFO:     127.0.0.1:34950 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:29:15,605 INFO:     127.0.0.1:34950 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:29:15,655 INFO:     127.0.0.1:34956 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:30:09,781 INFO:     127.0.0.1:49346 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:30:09,787 INFO:     127.0.0.1:49346 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:30:09,836 INFO:     127.0.0.1:49348 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.7258556, 'Подаришь сабочку')]}
+{}
+1 0
+2023-05-05 17:30:09,934 INFO:     127.0.0.1:49362 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:31:20,493 INFO:     127.0.0.1:51686 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:31:20,498 INFO:     127.0.0.1:51686 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:31:20,549 INFO:     127.0.0.1:51702 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:31:23,723 INFO:     127.0.0.1:56196 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:31:23,728 INFO:     127.0.0.1:56196 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:31:23,776 INFO:     127.0.0.1:56200 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.7661972, 'Это лучшая инвестиционная возможность которую'), (0.96091014, 'либо видели')]}
+{}
+2 0
+2023-05-05 17:31:23,853 INFO:     127.0.0.1:56204 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:32:16,235 INFO:     127.0.0.1:41480 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:32:16,239 INFO:     127.0.0.1:41480 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:32:16,287 INFO:     127.0.0.1:41496 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:32:19,486 INFO:     127.0.0.1:41508 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:32:19,497 INFO:     127.0.0.1:41508 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:32:19,550 INFO:     127.0.0.1:41512 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [(0.75637096, 'Пиздец')], 'advertisement': [], 'begging': [], 'normal': []}
+{'profanity': [75.63709616661072, 'Пиздец']}
+0 1
+2023-05-05 17:32:19,630 INFO:     127.0.0.1:41524 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:32:22,042 INFO:     127.0.0.1:41534 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:32:22,046 INFO:     127.0.0.1:41534 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:32:22,096 INFO:     127.0.0.1:41546 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:32:31,296 INFO:     127.0.0.1:56374 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:32:31,301 INFO:     127.0.0.1:56374 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:32:31,351 INFO:     127.0.0.1:56376 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [(0.47070783, 'Вы можете заработать либо мечтали')], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': []}
+{'manipulation': [47.070783376693726, 'Вы можете заработать либо мечтали']}
+0 1
+2023-05-05 17:32:31,432 INFO:     127.0.0.1:56384 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:32:33,342 INFO:     127.0.0.1:56394 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:32:33,346 INFO:     127.0.0.1:56394 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:32:33,396 INFO:     127.0.0.1:56404 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:32:45,110 INFO:     127.0.0.1:35620 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:32:45,113 INFO:     127.0.0.1:35620 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:32:45,162 INFO:     127.0.0.1:35630 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:32:48,753 INFO:     127.0.0.1:35636 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:32:48,758 INFO:     127.0.0.1:35636 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:32:48,809 INFO:     127.0.0.1:35642 - "GET /api/user/545021767?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.7258556, 'Нахуи')]}
+{}
+1 0
+2023-05-05 17:32:48,894 INFO:     127.0.0.1:35650 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:41:25,432 INFO:     127.0.0.1:50820 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:41:25,437 INFO:     127.0.0.1:50820 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:41:25,488 INFO:     127.0.0.1:50826 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:41:38,264 INFO:     127.0.0.1:58176 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:41:38,268 INFO:     127.0.0.1:58176 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:41:38,315 INFO:     127.0.0.1:58182 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [(0.9101554, 'Ты х ший человек')], 'advertisement': [], 'begging': [], 'normal': []}
+{'profanity': [91.01554155349731, 'Ты х ший человек']}
+0 1
+2023-05-05 17:41:38,389 INFO:     127.0.0.1:58184 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:43:22,182 INFO:     127.0.0.1:49392 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:43:22,187 INFO:     127.0.0.1:49392 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:43:22,237 INFO:     127.0.0.1:49404 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:43:40,184 INFO:     127.0.0.1:51992 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:43:40,190 INFO:     127.0.0.1:51992 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:43:40,240 INFO:     127.0.0.1:52004 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+{'manipulation': [], 'profanity': [], 'advertisement': [], 'begging': [], 'normal': [(0.86736184, 'Ты хороший человек')]}
+{}
+1 0
+2023-05-05 17:43:40,337 INFO:     127.0.0.1:52016 - "POST /api/check/?id_type=student_tg HTTP/1.1" 200 OK
+2023-05-05 17:43:42,762 INFO:     127.0.0.1:52032 - "POST /api/user?id_type=student_tg HTTP/1.1" 307 Temporary Redirect
+2023-05-05 17:43:42,766 INFO:     127.0.0.1:52032 - "POST /api/user/?id_type=student_tg HTTP/1.1" 400 Bad Request
+2023-05-05 17:43:42,818 INFO:     127.0.0.1:52038 - "GET /api/user/472803385?id_type=student_tg HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10382]
+INFO:     Stopping reloader process [10380]
