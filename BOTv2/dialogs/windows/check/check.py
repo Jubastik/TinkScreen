@@ -6,6 +6,10 @@ from aiogram_dialog.widgets.text import Const, Format
 from dialogs.states import HistorySG, CheckSG, MenuSG
 from dialogs.windows.check.methods import handle_text, getter_info
 
+example = "<code>{$SBER}  ждем 300 и сливаем</code>\n\
+    <code>Последний шанс сесть в ракету-колбасу {$GCHE} о которой писал тут</code>\n\
+    <code>{$SPCE} Кто пострадал от Тинькофф Переходите по ссылке https://t.me/i_scam</code>"
+
 CheckMainWin = Window(
     Format("Отправь текст для проверки 😉"),
     Group(
