@@ -49,7 +49,7 @@ async def api_check_text(tg_id: int, text: str):
             return data
 
 
-async def api_get_checks(tg_id: int, id_type="studen_tg"):
+async def api_get_checks(tg_id: int):
     headers = await get_headers()
     async with aiohttp.ClientSession(headers=headers) as session:
         params = {
