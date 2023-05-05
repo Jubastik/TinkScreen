@@ -4,7 +4,7 @@ from aiogram_dialog.widgets.kbd import Group, Start, Cancel
 from aiogram_dialog.widgets.text import Const, Format
 
 from dialogs.states import HistorySG, CheckSG, MenuSG
-from dialogs.windows.check.methods import handle_text
+from dialogs.windows.check.methods import handle_text, getter_info
 
 CheckMainWin = Window(
     Format("Отправь текст для проверки 😉"),
@@ -16,9 +16,10 @@ CheckMainWin = Window(
 )
 
 CheckInfoWin = Window(
-    Format("Результат проверки 👇"),
+    Format("Результат проверки 👇\n{check}"),
     Group(
         Cancel(Const("Назад")),
     ),
+    getter=getter_info,
     state=CheckSG.info,
 )
