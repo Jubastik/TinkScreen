@@ -52,8 +52,8 @@ async def api_get_checks(tg_id: int):
     headers = await get_headers()
     params = await get_params()
     async with aiohttp.ClientSession(headers=headers) as session:
-        async with session.post(f"{GET_CHECKS_URL}/{tg_id}", params=params) as resp:
+        async with session.get(f"{GET_CHECKS_URL}/{tg_id}", params=params) as resp:
             data = await resp.json()
             if resp.status != 200:
                 raise ApiError(CHECK_ERROR)
-            return data
+    return data

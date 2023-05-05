@@ -12,6 +12,7 @@ from aiohttp import ClientConnectorError
 from dialogs.states import MenuSG
 from dialogs.universal_methods import get_user
 from dialogs.windows.check.check import CheckMainWin, CheckInfoWin
+from dialogs.windows.history.history import HistoryMainWin
 # from dialogs.windows.bot_info.bot_info import InfoMainWin
 from dialogs.windows.menu.menu import MenuMainWin
 # from dialogs.windows.registration.registration import RegMainWin, RegLoginWin
@@ -53,9 +54,6 @@ async def error_handler(event, dialog_manager: DialogManager):
         return UNHANDLED
 
 
-# RegistrationDLG = Dialog(RegMainWin, RegLoginWin)
-# InfoDLG = Dialog(InfoMainWin)
 MenuDLG = Dialog(MenuMainWin)
 CheckDLG = Dialog(CheckMainWin, CheckInfoWin)
-# RemovalDLG = Dialog(RemovalMainWin)
-# SubscriptionsDLG = Dialog(SubscriptionsMainWin, SubscriptionsInfoWin)
+HistoryDLG = Dialog(HistoryMainWin)
