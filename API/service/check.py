@@ -26,7 +26,8 @@ class CheckService:
         check, err = CheckF.create_check(self.session, data_check)
         if err is not None:
             pass
-        check.text = translit(check.text, 'ru')
+        if "http" not in check.text:
+            check.text = translit(check.text, 'ru')
         model_res = model.predict_one(check.text, 5).get_scores()
         print(model_res)
         normal_cnt = 0
