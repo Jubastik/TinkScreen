@@ -25,7 +25,7 @@ class CheckService:
         check, err = CheckF.create_check(self.session, data_check)
         if err is not None:
             pass
-        model_res = model.predict_one(check.text, 10).get_scores()
+        model_res = model.predict_one(check.text, 5).get_scores()
         print(model_res)
         normal_cnt = 0
         violations_cnt = 0
