@@ -1,12 +1,10 @@
 from aiogram_dialog import DialogRegistry
 
-from dialogs.dialogs import RegistrationDLG, InfoDLG, MenuDLG, RemovalDLG, SubscriptionsDLG
+from dialogs.dialogs import MenuDLG, CheckDLG
 
 
 def register_dialogs(registry: DialogRegistry):
-    registry.register(RegistrationDLG)
-    registry.register(InfoDLG)
     registry.register(MenuDLG)
-    registry.register(RemovalDLG)
-    registry.register(SubscriptionsDLG)
+    registry.register(CheckDLG)
+
 

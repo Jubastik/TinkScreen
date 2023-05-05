@@ -10,12 +10,13 @@ from aiogram_dialog.api.exceptions import UnknownIntent
 from aiohttp import ClientConnectorError
 
 from dialogs.states import MenuSG
-from dialogs.universal_methods import login_user, del_message_by, del_keyboard
-from dialogs.windows.bot_info.bot_info import InfoMainWin
+from dialogs.universal_methods import get_user
+from dialogs.windows.check.check import CheckMainWin, CheckInfoWin
+# from dialogs.windows.bot_info.bot_info import InfoMainWin
 from dialogs.windows.menu.menu import MenuMainWin
-from dialogs.windows.registration.registration import RegMainWin, RegLoginWin
-from dialogs.windows.removal_user.removal import RemovalMainWin
-from dialogs.windows.subscriptions.subscriptions import SubscriptionsMainWin, SubscriptionsInfoWin
+# from dialogs.windows.registration.registration import RegMainWin, RegLoginWin
+# from dialogs.windows.removal_user.removal import RemovalMainWin
+# from dialogs.windows.subscriptions.subscriptions import SubscriptionsMainWin, SubscriptionsInfoWin
 from my_errors import ApiError
 
 dlg_router = Router()
@@ -23,19 +24,12 @@ dlg_router = Router()
 
 @dlg_router.message(CommandStart())
 async def handle_start_query(message: Message, dialog_manager: DialogManager):
-    await get_user(message.from_user.id, message.from_user.first_name)
     await starting_dispatcher(message, dialog_manager)
 
 
 async def starting_dispatcher(message: Message, dialog_manager: DialogManager):
+    user = await get_user(message.from_user.id, message.from_user.first_name)
     await dialog_manager.start(MenuSG.main, mode=StartMode.RESET_STACK)
-
-
-@dlg_router.message(Text(text="Вызвать меню"))
-async def update_menu(message: Message, dialog_manager: DialogManager):
-    await del_keyboard(message)
-    await message.delete()
-    await dialog_manager.show()
 
 
 @dlg_router.message(Command("ping"))
@@ -62,5 +56,6 @@ async def error_handler(event, dialog_manager: DialogManager):
 # RegistrationDLG = Dialog(RegMainWin, RegLoginWin)
 # InfoDLG = Dialog(InfoMainWin)
 MenuDLG = Dialog(MenuMainWin)
+CheckDLG = Dialog(CheckMainWin, CheckInfoWin)
 # RemovalDLG = Dialog(RemovalMainWin)
 # SubscriptionsDLG = Dialog(SubscriptionsMainWin, SubscriptionsInfoWin)

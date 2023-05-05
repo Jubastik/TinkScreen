@@ -3,7 +3,7 @@ from aiogram_dialog.widgets.kbd import Group, Start, Button
 from aiogram_dialog.widgets.text import Const, Format
 
 from dialogs.states import HistorySG, CheckSG, MenuSG
-from dialogs.windows.menu.methods import getter_menu, change_notifications
+from dialogs.windows.menu.methods import getter_menu
 
 MenuMainWin = Window(
     Format("Привет {name} {sticker}"),
