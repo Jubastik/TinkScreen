@@ -11,6 +11,7 @@ import my_err
 from api import router
 from database import db_session
 from service.model import ClassifierModule
+from service.model import HFClassifierModule
 from settings import settings
 
 
@@ -23,11 +24,12 @@ tags_metadata = [
 
 db_session.global_init()
 model = ClassifierModule(
-    path_to_model="model_data/pulse_model",
-    path_to_tokenizer="model_data/keras_tokenizer.pickle",
+    path_to_model="model_data/focloss_pulse_model",
+    path_to_tokenizer="model_data/0505_keras_tokenizer.pickle",
     # init_stopwords=False
 )
-
+model.load_model("model_data/focloss_pulse_model", raise_exception=True)
+modelHGF = HFClassifierModule("SkolkovoInstitute/russian_toxicity_classifier")
 
 app = FastAPI(
     title="TinkScreen",

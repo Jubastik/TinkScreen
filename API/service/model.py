@@ -9,10 +9,14 @@ from nltk.corpus import stopwords
 from keras.models import load_model
 from dataclasses import dataclass
 import numpy as np
+    
+from transformers import BertTokenizer, BertForSequenceClassification
+import tensorflow as tf
 
 STOP_WORDS: Optional[Set[str]] = None
 MAX_WORD_COUNT = 5
 LABELS = ('manipulation', 'profanity', 'advertisement', 'begging', 'normal')
+HF_LABELS = ("untoxic", "toxic")
 
 
 class ModelNotLoadException(Exception):
@@ -72,17 +76,17 @@ class PredictResult:
 
     def get_max_label(self):
         return LABELS[np.argmax(self.total_result)]
-
+    
     def __repr__(self):
         return "<Prediction for \"{:.20}...\": {} with probability {:%}>".format(
             self.text,
             self.get_max_label(),
             self.get_max_result()
         )
-
+    
     def __str__(self):
         return repr(self)
-
+    
     def get_scores(self) -> Dict[str, List[Tuple[float, str]]]:
         return {LABELS[i]: [
             (proba[i], text)
@@ -118,20 +122,20 @@ class ClassifierModule:
             self.load_tokenizer(path_to_tokenizer)
         if init_stopwords:
             init_stopwords_nltk()
-
+    
     def load_model(self, path_to_model: str, raise_exception: bool = False):
         try:
-            self._model = load_model(path_to_model)
+            self._model = load_model(path_to_model, compile=False)
         except Exception as e:
             self._model = None
             if raise_exception:
                 raise e
-
+    
     def get_model(self, raise_exception: bool = False):
         if self._model is None and raise_exception:
             raise ModelNotLoadException
         return self._model
-
+    
     def load_tokenizer(self, path_to_tokenizer: str, raise_exception: bool = False):
         try:
             with open(path_to_tokenizer, "rb") as f:
@@ -149,7 +153,7 @@ class ClassifierModule:
     def _predict(self, data: List[str], verbose: int | str = 0):
         word_seq = vectorize_input(data, self.get_tokenizer(raise_exception=True))
         return self.get_model(raise_exception=True).predict(word_seq, verbose=verbose)
-
+    
     def predict_one(self, text: str, max_words: Optional[int] = MAX_WORD_COUNT, verbose: int | str = 0):
         text = preprocess_input(text, STOP_WORDS)
         lines = []
@@ -161,6 +165,76 @@ class ClassifierModule:
         else:
             lines.append(" ".join(text))
         return PredictResult([(line, res) for line, res in zip(lines, self._predict(lines, verbose))])
-
+    
     def predict_many(self, data: List[str], max_words: Optional[int] = MAX_WORD_COUNT, verbose: int | str = 0):
         return list(map(lambda x: self.predict_one(x, max_words, verbose), data))
+
+
+
+class HFPredictResult(PredictResult):
+    total_result: np.array
+    text: str
+
+    def __init__(self, total_result, text):
+        self.total_result = total_result
+        self.text = text
+
+    @staticmethod
+    def calculate_total_result(separate_result) -> np.array:
+        raise NotImplementedError
+
+    @staticmethod
+    def calculate_text(separate_result):
+        raise NotImplementedError
+
+    def get_max_result(self):
+        return np.max(self.total_result)
+
+    def get_max_label(self):
+        return HF_LABELS[np.argmax(self.total_result)]
+    
+    def __repr__(self):
+        return "<Prediction for \"{:.20}...\": {}>".format(
+            self.text,
+            self.get_max_label(),
+        )
+    
+    def __str__(self):
+        return repr(self)
+    
+    def get_scores(self) -> Dict[str, List[Tuple[float, str]]]:
+        return {self.get_max_label(): [self.text]}
+
+    def get_human_readable_separates(self) -> str:
+        raise NotImplementedError
+
+
+class HFClassifierModule(ClassifierModule):
+    def __init__(self, path_to_model: Optional[str], path_to_tokenizer: Optional[str] = None):
+        super().__init__(path_to_model, path_to_tokenizer or path_to_model, init_stopwords=False)
+    
+    def load_model(self, path_to_model: str, raise_exception: bool = False):
+        try:
+            self._model = BertForSequenceClassification.from_pretrained('SkolkovoInstitute/russian_toxicity_classifier')
+        except Exception as e:
+            self._model = None
+            if raise_exception:
+                raise e
+    
+    def load_tokenizer(self, path_to_tokenizer: str, raise_exception: bool = False):
+        try:
+            self._tokenizer = BertTokenizer.from_pretrained('SkolkovoInstitute/russian_toxicity_classifier')
+        except Exception as e:
+            self._tokenizer = None
+            if raise_exception:
+                raise e
+
+    def _predict(self, text: str) -> np.array:
+        batch = self.get_tokenizer(raise_exception=True).encode(text, return_tensors='pt')
+        return self.get_model(raise_exception=True)(batch).logits.detach().numpy()
+    
+    def predict_one(self, text: str):
+        return HFPredictResult(self._predict(text), text)
+    
+    def predict_many(self, data: List[str]):
+        return list(map(lambda x: self.predict_one(x), data))

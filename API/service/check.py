@@ -17,7 +17,7 @@ class CheckService:
         self.session = session
 
     def create_check(self, data_check: shm.CheckCreate) -> Check:
-        from app import model
+        from app import model, modelHGF
         if data_check.user_id is None and data_check.tg_id:
             user, err = UserF.get_user_by_tg_id(self.session, data_check.tg_id)
             if err is not None:
@@ -44,7 +44,10 @@ class CheckService:
             val = list(values[0])
             val[0] *= 100
             scores[key] = val
-
+        if "profanity" not in scores:
+            scores["profanity"] = (0, check.text[:50])
+        hf_result = modelHGF.predict_one(check.text).get_max_label()
+        print(hf_result)
         print(scores)
         print(normal_cnt, violations_cnt)
         for type, score in scores.items():
@@ -52,6 +55,8 @@ class CheckService:
             if err is not None:
                 raise my_err.APIError(status.HTTP_404_NOT_FOUND, err)
             is_violation = True if score[0] >= db_type.blocking_score and normal_cnt <= violations_cnt * 4 else False
+            if db_type.name == "profanity" and hf_result == "toxic":
+                is_violation = True
             result, err = ResultF.create_result(self.session, res_shm.ResultCreate(score=score[0],
                                                                                    is_violation=is_violation,
                                                                                    violation=score[1] if is_violation is True else "",
