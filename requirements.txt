@@ -2,7 +2,9 @@ fastapi
 uvicorn
 pydantic
 sqlalchemy
-aiogram-dialog
+aiogram-dialog==2.0.0b16
+coloredlogs
+transformers
 nltk
 tensorflow-io-gcs-filesystem
 tensorflow
